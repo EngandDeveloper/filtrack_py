@@ -32,4 +32,6 @@ def getData(request):
     if request.GET.get('valence'):
         userInput[11] = request.GET.get('valence')
 
-    return 
+    playlist = ['0']
+
+    return render(request, 'main_filter/result.html', {'userInput':userInput, 'playlist':playlist})

@@ -15,6 +15,7 @@
         </header>
         
         <form action="/getData/" method="post" id="mainForm">
+            {% csrf_token %}
             <p>
             <label>This is the ... time I am searching: </label>    
             <input type="text" id="time" name="time"><br>
@@ -111,7 +112,7 @@
             </select> <br>
             </p>
 
-			<input type="submit" id="searchButton" value="Find Songs!">
+			<input type="submit" name="search" id="searchButton" value="Find Songs!">
 
         </form>
 
